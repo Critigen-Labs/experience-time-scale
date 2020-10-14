@@ -1,0 +1,28 @@
+{
+  "name": "time-scale-v2",
+  "type": "widget",
+  "version": "1.1.0",
+  "exbVersion": "1.1.0",
+  "author": "Critigen",
+  "description": "This is a simple time scale to interact with bird data.",
+  "copyright": "",
+  "dependency": [
+    "jimu-arcgis",
+    "https://unpkg.com/jquery@3.5.1/dist/jquery.js"
+  ],
+  "properties": {},
+  "extensions": [
+    {
+      "name": "My store2",
+      "point": "REDUX_STORE",
+      "uri": "extensions/my-store2"
+    }
+  ],
+  "translatedLocales": [
+    "en"
+  ],
+  "defaultSize": {
+    "width": 800,
+    "height": 500
+  }
+}

@@ -1,0 +1,500 @@
+@import "node_modules\\slick-carousel\\slick\\slick.scss";
+@import "node_modules\\slick-carousel\\slick\\slick-theme.scss";
+
+$myColor: red;
+
+header {
+    background-color: black !important;
+    border-bottom: 1px solid #5f5f5f !important;
+    color: white;
+    padding: 13px 0;
+    //overflow: hidden;
+
+    .audobon-title {
+        height: 53px;
+        margin: 0 0 0 27px;
+    }
+
+    nav {
+        a {
+            color: white !important;
+        }
+    }
+
+    .first-link {
+        padding-left: 30px;
+        color: white !important;
+    }
+
+    .pad-up {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .pad-up-more {
+        padding-top: 0;
+    }
+
+    .selected-bird {
+        color: white !important;
+        font-size: 16px;
+        padding: 5px 10px;
+        height: auto !important;
+        margin: 0 27px;
+        background-color: #0aa8e3;
+        font-weight: 100;
+        border-width: 0;
+
+        &:after {
+            color: white !important;
+        }
+    }
+
+    .gmfbUk {
+        box-shadow: none;
+        background-image: url(images/sillySelectArrows.svg);
+        background-position: 190px center;
+    }
+
+    .gmfbUk:focus {
+        box-shadow: none;
+    }
+
+    .select-dropdown {
+        min-width: 212px;
+    }
+
+    nav {
+        margin-left: 9px !important;
+        border-left: 1px solid #333;
+        padding: 0 0 0 23px !important;
+
+        .take-action {
+            background-color: #f15936;
+            padding: 4px 7px;
+            border: 1px solid #b92b0a;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+
+            &:hover,
+            &:focus {
+                background-color: #b92b0a;
+                border: 1px solid #b92b0a !important;
+            }
+        }
+    }
+}
+
+.map-wrapper {
+    flex: 1;
+
+    .esri-view-surface {
+        background-color: rgb(29, 34, 36);
+    }
+}
+
+.mapContainer {
+    height: 100%;
+    width: 100%;
+}
+
+.load-screen {
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+}
+
+.Toastify__progress-bar {
+    visibility: visible !important;
+}
+
+.Toastify__toast--default {
+    background: rgb(175, 93, 0) !important;
+}
+
+.bird-info {
+    height: calc(100% - 100px);
+
+    .slick-slider {
+        margin: 50px 0;
+        height: calc(100% - 80px);
+
+        .slick-slide {
+            background-color: #fbfaf6;
+            outline: none;
+        }
+
+        .slick-arrow {
+            z-index: 500;
+
+            //top: 34%;
+            &:before {
+                //color: rgb(255, 255, 255);
+                font-size: 30px;
+            }
+        }
+
+        .slick-list {
+            //margin: 50px 0;
+            height: calc(100% + 80px) !important;
+            background-color: white;
+            box-shadow: 0px 0px 13px rgba(0, 15, 82, 0.8);
+        }
+
+        // .slick-prev {
+        //     left: -35px;
+        // }
+        .slick-prev,
+        .slick-next {
+            left: 50%;
+            transform: translate(-50%, 0) rotate(90deg);
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: white;
+            }
+        }
+
+        .slick-next {
+            top: unset;
+            bottom: -110px;
+        }
+
+        .slick-prev {
+            top: -40px;
+        }
+
+        .bird-image {
+            display: inline-block;
+            height: auto;
+            max-height: 100px;
+            width: auto;
+            max-width: 44%;
+        }
+
+        .bird-buttons {
+            margin: 8px 0 0;
+            overflow: hidden;
+
+            button {
+                background-color: #f15936;
+                border: 1px solid #b92b0a;
+                color: white;
+                margin: 0 -1px 0 0;
+                font-size: calc(11px + 0.1vw);
+                padding: 4px 8px;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background-color: #b92b0a;
+                }
+
+                &:focus {
+                    outline: none !important;
+                    background-color: #b92b0a;
+                }
+            }
+
+            .jWrxzk,
+            .dQGOHm {
+                background-color: #ffffff !important;
+                color: #b92b0a !important;
+            }
+
+            nav button:first-child {
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+
+            nav button:last-child {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+
+            .click-here {
+                div {
+                    font-size: 10pt;
+                    display: inline-block;
+                    color: #0aa8e3;
+                    font-weight: 900;
+                }
+
+                .annual {
+                    width: 30%;
+                    text-align: right;
+                }
+
+                .connection {
+                    width: 30%;
+                    text-align: end;
+                }
+
+                .threat {
+                    width: 30%;
+                }
+            }
+        }
+
+        .bird-name {
+            font-weight: 900;
+        }
+
+        .bird-species {
+            font-style: italic;
+            line-height: 120%;
+            font-size: 15px;
+            margin: 0 0 14px 0;
+        }
+
+        .bird-card {
+            margin: 6px 13px;
+            padding: 17px;
+            border-radius: 0;
+            border: 1px solid #d4d4d4;
+            background-color: white;
+            transition: all 0.3s ease;
+
+            &.active {
+                border: 1px solid #0aa8e3;
+                border-radius: 0;
+                box-shadow: 0 0 8px rgba(53, 53, 53, 0.38);
+            }
+
+            .small-chart {
+                padding-top: 3px;
+            }
+
+            .small-migration-label {
+                position: absolute;
+                margin-top: 41px;
+                font-size: 10pt;
+                margin-left: -72px;
+            }
+
+            .song-button {
+                position: absolute;
+                left: 27px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.modal-select {
+    height: 100px;
+    overflow: visible !important;
+
+    aside {
+        width: 350px;
+    }
+
+    .select-dropdown {
+        float: left;
+        width: 350px;
+    }
+
+    .select-button {
+        float: right;
+        top: 3px;
+    }
+}
+
+.left-wrapper {
+    background-color: #0aa8e3;
+    width: 20%;
+    min-width: 200px;
+    z-index: 0;
+
+    &.collapsed {
+        left: -500px;
+        position: absolute;
+
+        .slick-arrow {
+            display: none !important;
+        }
+    }
+}
+
+// .esri-expand__container--expanded {
+//     top: 150px !important;
+//     height: 60% !important;
+// }
+
+
+.big-chart {
+    max-height: 175px;
+    padding-top: 10px;
+
+    div canvas {
+        height: 140px;
+    }
+}
+
+.bird-slider {
+    margin: -75px 15px 0px 25px;
+
+    .MuiSlider-thumb {
+        border-radius: 8px !important;
+        background-color: #0aa8e3;
+        border: none;
+        color: white;
+    }
+}
+
+.map-button {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
+.bird-chart-slider-container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    padding: 20px 13px 14px 13px;
+    // border: 1px solid #ababab;
+    // border-width: 1px 0 0 1px;
+
+    .play-buttons {
+        width: 70px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 14px 0 16px;
+
+        .animate-control {
+            font-size: 14px;
+            height: auto;
+            text-align: center;
+            margin: 0 -17px;
+            line-height: 130%;
+        }
+
+        button {
+            width: 48px;
+            height: 48px;
+            margin-left: 7px;
+        }
+
+        .month-picker {
+            width: 90px;
+            margin: 0 -11px;
+
+            button {
+                width: 100%;
+                height: 35px;
+                margin: 3px 0 0 0;
+            }
+
+            aside {
+                max-height: 130px;
+            }
+        }
+    }
+
+    .location-buttons {
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 14px 0 16px;
+
+        .animate-control {
+            font-size: 14px;
+            height: auto;
+            text-align: center;
+            margin: 0 -17px;
+            line-height: 130%;
+        }
+
+        button {
+            width: 48px;
+            height: 48px;
+            margin-left: 7px;
+        }
+
+        .location-picker {
+            width: 220px;
+            margin: 0 -11px;
+
+            button {
+                width: 100%;
+                height: 35px;
+                margin: 3px 0 0 0;
+            }
+        }
+    }
+
+    .bird-chart-slider-wrapper {
+        width: 100%;
+    }
+}
+
+.bottom-map-container {
+    height: 0;
+}
+
+#map-view-container,
+#map-view-container div,
+#map-view-container div div {
+    &:focus {
+        outline: none !important;
+    }
+}
+
+.map-button-container {
+    position: absolute;
+    top: calc(100% - 100px);
+    margin-left: 15px;
+    width: 32px;
+    height: 32px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.kqwcDO {
+    z-index: 100;
+    background-color: white;
+    border: 1px solid #888;
+    border-width: 1px 0 0 1px;
+}
+
+
+.bottom-visible {
+    .bottom-map-container {
+        height: 200px;
+    }
+
+    .map-button-container {
+        top: calc(100% - 290px);
+    }
+}
+
+.bird-connections {
+    display: flex;
+    flex-direction: row;
+    margin-left: 70px;
+
+    >div {
+        padding: 10px 20px;
+        border: #0aa8e3 solid 2px;
+        margin: 21px;
+        font-size: 22pt;
+        line-height: 3rem;
+    }
+
+    .connection-label {
+        font-weight: 900;
+    }
+}
+
+.hidden {
+    visibility: hidden;
+    display: none;
+    opacity: 0;
+}
+
+.bird-image {
+    width: 145px;
+
+}
